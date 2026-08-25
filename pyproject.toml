@@ -5,11 +5,34 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "openvox"
 version = "0.1.0"
-description = "All-in-one, fully offline voice engine (speech-to-text and text-to-speech)."
+description = "All-in-one, fully offline voice engine: streaming STT, TTS, voice cloning, enrollment, enhancement, and an LLM voice-agent loop."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
 authors = [
   { name = "Zashiron", email = "zashiron.inc@gmail.com" }
 ]
-requires-python = ">=3.11"
+maintainers = [
+  { name = "Zashiron", email = "zashiron.inc@gmail.com" }
+]
+keywords = [
+  "voice", "speech-to-text", "text-to-speech", "stt", "tts",
+  "voice-cloning", "voice-agent", "offline", "on-device",
+  "speech-recognition", "speech-synthesis", "whisper", "kokoro",
+  "robotics", "edge-ai", "privacy",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: Other/Proprietary License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Environment :: GPU :: NVIDIA CUDA",
+]
 dependencies = ["numpy>=1.24", "platformdirs>=4.0"]
 
 [project.optional-dependencies]
@@ -43,6 +66,8 @@ openvox-agent-demo = "openvox.agent.demo:main"
 
 [project.urls]
 Homepage = "https://github.com/headlessripper/OpenVox"
+Repository = "https://github.com/headlessripper/OpenVox"
+Issues = "https://github.com/headlessripper/OpenVox/issues"
 
 [tool.setuptools.packages.find]
 include = ["openvox*"]

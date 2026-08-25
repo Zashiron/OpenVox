@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/openvox-icon.png" alt="OpenVox" width="120"/>
+<img src="https://raw.githubusercontent.com/headlessripper/OpenVox/main/docs/assets/openvox-icon.png" alt="OpenVox" width="120"/>
 
 <h1>OpenVox</h1>
 
@@ -252,7 +252,7 @@ The vision in four horizons:
 
 ## 🗂️ Design docs
 
-OpenVox is built spec&#8209;first. Full designs and step&#8209;by&#8209;step implementation plans for each engine live under [`docs/superpowers/`](docs/superpowers/), split into [specs](docs/superpowers/specs/) and [plans](docs/superpowers/plans/).
+OpenVox is built spec&#8209;first. Full designs and step&#8209;by&#8209;step implementation plans for each engine live under [`docs/superpowers/`](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/), split into [specs](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/specs/) and [plans](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/plans/).
 
 <hr/>
 
@@ -262,13 +262,13 @@ Contributions are welcome: bug reports, feature ideas, and pull requests. Please
 
 ## 📜 License
 
-Released under the **OpenVox Proprietary License (Zashiron License v1.2)**, see [`LICENSE`](LICENSE). Commercial use requires written authorization.
+Released under the **OpenVox Proprietary License (Zashiron License v1.2)**, see [`LICENSE`](https://github.com/headlessripper/OpenVox/blob/main/LICENSE). Commercial use requires written authorization.
 
 <div align="center">
 
 <br/>
 
-<img src="docs/assets/openvox-logo.jpg" alt="OpenVox, Voice AI" width="280"/>
+<img src="https://raw.githubusercontent.com/headlessripper/OpenVox/main/docs/assets/openvox-logo.jpg" alt="OpenVox, Voice AI" width="280"/>
 
 <b>OpenVox</b> &nbsp;·&nbsp; hear and speak, entirely offline.
 
