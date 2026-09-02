@@ -1,44 +1,30 @@
-<div align="center">
+<img src="https://raw.githubusercontent.com/headlessripper/OpenVox/main/docs/assets/openvox-icon.png" alt="OpenVox" width="120" /># OpenVox
 
-<img src="https://raw.githubusercontent.com/headlessripper/OpenVox/main/docs/assets/openvox-icon.png" alt="OpenVox" width="120"/>
+### The all‑in‑one, fully offline voice engine
 
-<h1>OpenVox</h1>
+Speech‑to‑text and text‑to‑speech that runs **entirely on your own hardware**.\
+No cloud. No API keys. No per‑minute fees.
 
-<h3>The all&#8209;in&#8209;one, fully offline voice engine</h3>
+![Offline](https://img.shields.io/badge/100%25-Offline-1E6FB8?style=for-the-badge)
 
-<p>Speech&#8209;to&#8209;text and text&#8209;to&#8209;speech that runs <b>entirely on your own hardware</b>.<br/>No cloud. No API keys. No per&#8209;minute fees.</p>
+![Python 3.11+](https://img.shields.io/badge/Python-3.11+-16264F?style=for-the-badge)
 
-<p>
-<img src="https://img.shields.io/badge/100%25-Offline-1E6FB8?style=for-the-badge" alt="Offline"/>
-<img src="https://img.shields.io/badge/Python-3.11+-16264F?style=for-the-badge" alt="Python 3.11+"/>
-<img src="https://img.shields.io/badge/Engines-6-2F86CF?style=for-the-badge" alt="6 engines"/>
-<img src="https://img.shields.io/badge/License-Zashiron%20v1.2-6FC0F0?style=for-the-badge" alt="License"/>
-</p>
+![7 engines](https://img.shields.io/badge/Engines-7-2F86CF?style=for-the-badge)
 
-<p>
-<a href="#-engines"><b>Engines</b></a> &nbsp;·&nbsp;
-<a href="#-quickstart"><b>Quickstart</b></a> &nbsp;·&nbsp;
-<a href="#-streaming-tts-with-barge-in"><b>Barge&#8209;in</b></a> &nbsp;·&nbsp;
-<a href="#-roadmap"><b>Roadmap</b></a> &nbsp;·&nbsp;
-<a href="https://github.com/headlessripper/OpenVox"><b>GitHub&nbsp;↗</b></a>
-</p>
+![License](https://img.shields.io/badge/License-Zashiron%20v1.2-6FC0F0?style=for-the-badge)
 
-</div>
+[**Engines**](#-engines)  ·  [**Quickstart**](#-quickstart)  ·  [**Barge‑in**](#-streaming-tts-with-barge-in)  ·  [**Voice Agent**](#-llm-voice-agent)  ·  [**Roadmap**](#-roadmap)  ·  [**GitHub ↗**](https://github.com/headlessripper/OpenVox)
 
-<hr/>
+---
 
-OpenVox is a complete voice stack, speech&#8209;to&#8209;text *and* text&#8209;to&#8209;speech, built for the places cloud voice services can't go: robots, embedded and edge devices, air&#8209;gapped systems, and any product where audio must never leave the machine.
+OpenVox is a complete voice stack, speech‑to‑text *and* text‑to‑speech, built for the places cloud voice services can't go: robots, embedded and edge devices, air‑gapped systems, and any product where audio must never leave the machine.
 
-The goal is simple and ambitious: **match the quality of cloud services like ElevenLabs, but 100% offline**, then beat them on the things a cloud API structurally can't do, namely zero latency jitter, zero marginal cost, total privacy, and deep on&#8209;device integration.
-
-<div align="center">
+The goal is simple and ambitious: **match the quality of cloud services like ElevenLabs, but 100% offline**, then beat them on the things a cloud API structurally can't do, namely zero latency jitter, zero marginal cost, total privacy, and deep on‑device integration.
 
 ### Why OpenVox
 
-</div>
-
-| | Cloud voice APIs | **OpenVox** |
-|---|---|---|
+|  | Cloud voice APIs | **OpenVox** |
+| --- | --- | --- |
 | **Connectivity** | Requires internet | **Fully offline / air-gapped** |
 | **Cost** | Per-minute / per-character fees | **Zero marginal cost**, run it all day for free |
 | **Privacy** | Audio leaves your device | **Audio never leaves the machine** |
@@ -46,28 +32,25 @@ The goal is simple and ambitious: **match the quality of cloud services like Ele
 | **Rate limits** | Throttled | **None** |
 | **Deployment** | Someone else's servers | **Your robot, your edge box, your terms** |
 
-A natural fit for **robotics, defense, medical, industrial, maritime, and privacy&#8209;sensitive** applications, anywhere a device needs to hear and speak without phoning home.
+A natural fit for **robotics, defense, medical, industrial, maritime, and privacy‑sensitive** applications, anywhere a device needs to hear and speak without phoning home.
 
-<hr/>
+---
 
 ## 🧩 Engines
 
 OpenVox is one package, `openvox`, with each engine kept modular and independently installable so you only ship what a given device needs. Every engine sits behind a **swappable backend interface**, so the model underneath can be upgraded or replaced without touching your code.
 
-<div align="center">
-
 | Engine | What it does | Status |
-|:---|:---|:---:|
-| 🎙️ **`openvox.stt`** | Streaming speech&#8209;to&#8209;text: live partials, finals, word timestamps | ✅ Available |
-| 🗣️ **`openvox.tts`** | Natural, human&#8209;sounding text&#8209;to&#8209;speech | ✅ Available |
-| ⚡ **`openvox.tts` · stream** | Real&#8209;time streaming with instant `stop()` barge&#8209;in | ✅ Available |
-| 🎭 **`openvox.clone`** | Zero&#8209;shot voice cloning from a short sample | ✅ Available |
-| 🧬 **`openvox.enroll`** | A reusable, higher&#8209;fidelity voice profile from several clips | ✅ Available |
-| 🧼 **`openvox.enhance`** | Denoise, restore, and bandwidth&#8209;extend a poor recording | ✅ Available |
+| --- | --- | --- |
+| 🎙️ `openvox.stt` | Streaming speech‑to‑text: live partials, finals, word timestamps | ✅ Available |
+| 🗣️ `openvox.tts` | Natural, human‑sounding text‑to‑speech | ✅ Available |
+| ⚡ `openvox.tts` **· stream** | Real‑time streaming with instant `stop()` barge‑in | ✅ Available |
+| 🎭 `openvox.clone` | Zero‑shot voice cloning from a short sample | ✅ Available |
+| 🧬 `openvox.enroll` | A reusable, higher‑fidelity voice profile from several clips | ✅ Available |
+| 🧼 `openvox.enhance` | Denoise, restore, and bandwidth‑extend a poor recording | ✅ Available |
+| 🤖 `openvox.agent` | LLM voice‑agent loop: mic to STT to your LLM to streaming TTS, with barge‑in | ✅ Available |
 
-</div>
-
-<hr/>
+---
 
 ## 🚀 Quickstart
 
@@ -84,11 +67,11 @@ python -m openvox.tts.demo --text "This gets cut off partway through." --stream 
 
 Each capability is an optional extra, so you install only what you need: `stt`, `stt-demo`, `tts`, `tts-gpu`, `clone`, `enroll`, `enhance`, `dev`.
 
-<hr/>
+---
 
-## 🎙️ Speech&#8209;to&#8209;Text
+## 🎙️ Speech‑to‑Text
 
-Real&#8209;time streaming transcription with live partials that firm up into finals, plus word&#8209;level timestamps. Neural voice&#8209;activity detection keeps it robust in noise, a sliding window bounds latency on long speech, and it runs CUDA&#8209;accelerated with an automatic CPU fallback.
+Real‑time streaming transcription with live partials that firm up into finals, plus word‑level timestamps. Neural voice‑activity detection keeps it robust in noise, a sliding window bounds latency on long speech, and it runs CUDA‑accelerated with an automatic CPU fallback.
 
 ```bash
 pip install -e ".[stt,stt-demo]"
@@ -112,13 +95,13 @@ for word in result.words:
     print(f"  {word.word}: [{word.start:.2f}s, p={word.probability:.2f}]")
 ```
 
-<sub>**Flags:** `--model` (`tiny`/`base`/`small`/`distil-large-v3`/`large-v3`) · `--device` (`cuda`/`cpu`) · `--language` · `--file` (any format/rate) · `--full`.</sub>
+**Flags:** `--model` (`tiny`/`base`/`small`/`distil-large-v3`/`large-v3`) · `--device` (`cuda`/`cpu`) · `--language` · `--file` (any format/rate) · `--full`.
 
-<hr/>
+---
 
-## 🗣️ Text&#8209;to&#8209;Speech
+## 🗣️ Text‑to‑Speech
 
-Genuinely human&#8209;sounding speech, fully offline, with 28 built&#8209;in English voices at 24 kHz. The engine auto&#8209;selects the GPU when available and falls back to CPU.
+Genuinely human‑sounding speech, fully offline, with 28 built‑in English voices at 24 kHz. The engine auto‑selects the GPU when available and falls back to CPU.
 
 ```bash
 pip install -e ".[tts]"       # CPU
@@ -134,15 +117,15 @@ engine.synthesize("Save me to a file.").save_wav("out.wav")
 engine.voices()                                       # list built-in voices
 ```
 
-<sub>**Flags:** `--text` (required) · `--voice` · `--device` · `--speed` · `--out PATH` · `--no-play`.</sub>
+**Flags:** `--text` (required) · `--voice` · `--device` · `--speed` · `--out PATH` · `--no-play`.
 
-<hr/>
+---
 
-## ⚡ Streaming TTS with Barge&#8209;in
+## ⚡ Streaming TTS with Barge‑in
 
 Speech should start almost immediately and be **interruptible the instant the user speaks**, which is essential for robots and interactive agents. OpenVox streams synthesized audio segment by segment and exposes a `stop()` that cuts playback within a single audio block.
 
-The same call works for a built&#8209;in voice **or a cloned voice profile**: pass `voice="af_heart"` or `voice="alice.ovx"`.
+The same call works for a built‑in voice **or a cloned voice profile**: pass `voice="af_heart"` or `voice="alice.ovx"`.
 
 ```python
 from openvox.tts import TTSEngine
@@ -162,15 +145,15 @@ handle.wait()     # block until done (or already stopped)
 engine.say_stream("Now in a cloned voice.", voice="alice.ovx")
 ```
 
-`stop()` is signal&#8209;driven and thread&#8209;safe, so a future full&#8209;duplex loop (listening while OpenVox speaks) simply calls `handle.stop()` when it hears the user.
+`stop()` is signal‑driven and thread‑safe, so a future full‑duplex loop (listening while OpenVox speaks) simply calls `handle.stop()` when it hears the user.
 
-<sub>**New flags:** `--stream` · `--interrupt-after SECONDS` · `--voice` also accepts an `.ovx` profile path.</sub>
+**New flags:** `--stream` · `--interrupt-after SECONDS` · `--voice` also accepts an `.ovx` profile path.
 
-<hr/>
+---
 
 ## 🎭 Voice Cloning
 
-Zero&#8209;shot voice cloning: give a short reference clip and speak any text in that voice, fully offline (via [Chatterbox](https://github.com/resemble-ai/chatterbox), MIT). Every generated clip carries an imperceptible neural watermark for traceability.
+Zero‑shot voice cloning: give a short reference clip and speak any text in that voice, fully offline (via [Chatterbox](https://github.com/resemble-ai/chatterbox), MIT). Every generated clip carries an imperceptible neural watermark for traceability.
 
 ```bash
 pip install -e ".[clone]"
@@ -187,15 +170,15 @@ engine.clone("Speak this in my voice.", reference_audio="myvoice.mp3").save_wav(
 engine.clone("Speak this in the enrolled voice.", profile="alice.ovx").save_wav("out.wav")
 ```
 
-<sub>**Flags:** `--text` · `--ref PATH` · `--profile PATH` · `--exaggeration` · `--cfg` · `--device` · `--out` · `--no-play`.</sub>
+**Flags:** `--text` · `--ref PATH` · `--profile PATH` · `--exaggeration` · `--cfg` · `--device` · `--out` · `--no-play`.
 
-<hr/>
+---
 
 ## 🧬 Voice Enrollment
 
-Zero&#8209;shot cloning is only as good as one reference clip. **Enrollment** turns *several* clips of a voice into a saved, reusable **voice profile** (`.ovx`) that clones with materially higher, more consistent fidelity, and needs no reference clip at generation time.
+Zero‑shot cloning is only as good as one reference clip. **Enrollment** turns *several* clips of a voice into a saved, reusable **voice profile** (`.ovx`) that clones with materially higher, more consistent fidelity, and needs no reference clip at generation time.
 
-Under the hood it builds a robust speaker representation from all the clips, then runs a speaker&#8209;similarity&#8209;guided search that optimizes the cloning conditioning to sound as close to the real voice as possible. No transcripts required.
+Under the hood it builds a robust speaker representation from all the clips, then runs a speaker‑similarity‑guided search that optimizes the cloning conditioning to sound as close to the real voice as possible. No transcripts required.
 
 ```bash
 pip install -e ".[enroll]"                # composes the clone + enhance engines
@@ -213,13 +196,13 @@ profile.save("alice.ovx")
 # Use the profile anywhere a voice is accepted, cloning or streaming TTS.
 ```
 
-<sub>**Flags:** `--in PATH [PATH ...]` · `--out PATH` · `--quality` (`fast`/`balanced`/`thorough`) · `--device` · `--no-enhance`. The optimization search runs on GPU; on a CPU&#8209;only machine enrollment uses the robust&#8209;baseline stage only.</sub>
+**Flags:** `--in PATH [PATH ...]` · `--out PATH` · `--quality` (`fast`/`balanced`/`thorough`) · `--device` · `--no-enhance`. The optimization search runs on GPU; on a CPU‑only machine enrollment uses the robust‑baseline stage only.
 
-<hr/>
+---
 
 ## 🧼 Speech Enhancement
 
-Restore a poorly&#8209;recorded clip, denoise, enhance, and extend bandwidth (16 kHz to 44.1 kHz), fully offline (via [resemble&#8209;enhance](https://github.com/resemble-ai/resemble-enhance), MIT). The cloner and enroller use it **automatically** to clean audio before use.
+Restore a poorly‑recorded clip, denoise, enhance, and extend bandwidth (16 kHz to 44.1 kHz), fully offline (via [resemble‑enhance](https://github.com/resemble-ai/resemble-enhance), MIT). The cloner and enroller use it **automatically** to clean audio before use.
 
 ```bash
 pip install -e ".[enhance]"
@@ -233,28 +216,64 @@ engine = EnhanceEngine(device="cuda")
 engine.enhance_file("poor.wav").save_wav("clean.wav")   # denoise + restore to 44.1 kHz
 ```
 
-<sub>**Flags:** `--in PATH` · `--out PATH` · `--device` · `--denoise-only` · `--nfe`.</sub>
+**Flags:** `--in PATH` · `--out PATH` · `--device` · `--denoise-only` · `--nfe`.
 
-<hr/>
+---
+
+## 🤖 LLM Voice Agent
+
+Drop any local LLM between OpenVox's ears and mouth and you have a complete, fully offline voice assistant: the agent listens on the mic, transcribes with `openvox.stt`, hands the text to **your** model, and speaks the reply back through streaming `openvox.tts`, **all on‑device**. While it speaks it keeps listening, so the moment the user starts talking it cuts itself off (barge‑in) and picks up the new turn. It keeps conversation history, survives a failing turn, and speaks in any built‑in **or cloned** voice.
+
+Your LLM is just a callable, `respond(user_text, history) -> str | Iterator[str]`, so it plugs into anything. Yield the reply token‑by‑token and OpenVox starts speaking the first sentence while the rest is still generating. Helpers for a local **Ollama** or any **OpenAI‑compatible** server (llama.cpp, vLLM, LM Studio) are built in.
+
+```bash
+pip install -e ".[agent]"      # composes the stt + tts engines
+```
+
+```python
+from openvox.agent import VoiceAgent
+from openvox.agent.llm import ollama          # or openai_compatible(base_url=..., model=...)
+from openvox.stt import STTEngine
+from openvox.tts import TTSEngine
+
+agent = VoiceAgent(
+    llm=ollama(model="llama3.2"),             # any callable: respond(text, history) -> str | Iterator[str]
+    stt=STTEngine(model="base"),
+    tts=TTSEngine(voice="af_heart"),
+    voice="af_heart",                          # a built-in voice, or an "alice.ovx" cloned profile
+    barge_in=True,                             # interrupt playback the instant the user speaks
+)
+agent.run()                                    # mic -> STT -> LLM -> streaming TTS, until Ctrl-C
+```
+
+Or drive the whole loop from the command line:
+
+```bash
+python -m openvox.agent.demo --llm ollama --model llama3.2 --voice af_heart
+```
+
+**Flags:** `--llm` (`echo`/`ollama`/`openai`) · `--model` · `--base-url` · `--voice` (built‑in name or `.ovx`) · `--stt-model` · `--no-barge-in`.
+
+---
 
 ## 🗺️ Roadmap
 
 The vision in four horizons:
 
-1. **Parity of plumbing.** An importable, offline library: streaming STT ✅, streaming TTS ✅, a headless daemon, and a ROS 2 node.
-2. **Parity of quality.** A full model ladder, GPU / Jetson / ARM backends, punctuation, diarization, wake&#8209;word, and command&#8209;grammar biasing.
-3. **Surpass the cloud.** On&#8209;device voice cloning ✅, a sub&#8209;100 ms full&#8209;duplex listen&#8209;and&#8209;speak loop, on&#8209;device adaptive fine&#8209;tuning, and mic&#8209;array direction&#8209;of&#8209;arrival.
-4. **Platform.** A community voice&#8209;model hub, an eval harness proving OpenVox beats the cloud on real&#8209;world audio, and a hardened cross&#8209;platform SDK.
+1. **Parity of plumbing.** An importable, offline library: streaming STT ✅, streaming TTS ✅, an LLM voice‑agent loop ✅, a headless daemon, and a ROS 2 node.
+2. **Parity of quality.** A full model ladder, GPU / Jetson / ARM backends, punctuation, diarization, wake‑word, and command‑grammar biasing.
+3. **Surpass the cloud.** On‑device voice cloning ✅, an LLM plug‑and‑play route ✅, a sub‑100 ms full‑duplex listen‑and‑speak loop, on‑device adaptive fine‑tuning, and mic‑array direction‑of‑arrival.
+4. **Platform.** A community voice‑model hub, an eval harness proving OpenVox beats the cloud on real‑world audio, and a hardened cross‑platform SDK.
 
-<sub>Next up: an **LLM plug&#8209;and&#8209;play route**, a drop&#8209;in STT to your model to TTS loop with barge&#8209;in for building voice assistants.</sub>
+Next up: **full‑duplex** with echo cancellation (listen and speak at once, sub‑100 ms), and a **unified config route** to tweak every engine's parameters from one place.
 
-<hr/>
+---
 
 ## 🗂️ Design docs
 
-OpenVox is built spec&#8209;first. Full designs and step&#8209;by&#8209;step implementation plans for each engine live under [`docs/superpowers/`](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/), split into [specs](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/specs/) and [plans](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/plans/).
+OpenVox is built spec‑first. Full designs and step‑by‑step implementation plans for each engine live under `docs/superpowers/`, split into [specs](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/specs/) and [plans](https://github.com/headlessripper/OpenVox/blob/main/docs/superpowers/plans/).
 
-<hr/>
+---
 
 ## 🤝 Contributing
 
@@ -262,14 +281,6 @@ Contributions are welcome: bug reports, feature ideas, and pull requests. Please
 
 ## 📜 License
 
-Released under the **OpenVox Proprietary License (Zashiron License v1.2)**, see [`LICENSE`](https://github.com/headlessripper/OpenVox/blob/main/LICENSE). Commercial use requires written authorization.
+Released under the **OpenVox Proprietary License (Zashiron License v1.2)**, see `LICENSE`. Commercial use requires written authorization.
 
-<div align="center">
-
-<br/>
-
-<img src="https://raw.githubusercontent.com/headlessripper/OpenVox/main/docs/assets/openvox-logo.jpg" alt="OpenVox, Voice AI" width="280"/>
-
-<b>OpenVox</b> &nbsp;·&nbsp; hear and speak, entirely offline.
-
-</div>
+<img src="https://raw.githubusercontent.com/headlessripper/OpenVox/main/docs/assets/openvox-logo.jpg" alt="OpenVox, Voice AI" width="280" />**OpenVox**  ·  hear and speak, entirely offline.
